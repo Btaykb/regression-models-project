@@ -45,4 +45,4 @@ grid_search = RandomizedSearchCV(
 grid_search.fit(X_train, y_train)
 y_pred_tuned = grid_search.predict(X_test)
 score_tuned = r2_score(y_test, y_pred_tuned)
-print(f"R2 Score for tuned model: {score_tuned}")
+print(f"R2 Score for tuned model: {score_tuned}")  # 0.80646

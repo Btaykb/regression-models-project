@@ -28,4 +28,4 @@ pipeline = Pipeline(steps=[
 pipeline.fit(X_train, y_train)
 y_pred = pipeline.predict(X_test)
 score = r2_score(y_test, y_pred)
-print(score)
+print(score)  # 0.72756

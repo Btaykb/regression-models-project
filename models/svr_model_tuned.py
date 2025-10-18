@@ -38,4 +38,4 @@ print("Best CV score:", grid_search.best_score_)
 best_model = grid_search.best_estimator_
 y_pred = best_model.predict(X_test)
 score = r2_score(y_test, y_pred)
-print(score)
+print(score)  # 0.75971
