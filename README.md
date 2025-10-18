@@ -68,12 +68,7 @@ A small project exploring regression models on the California housing dataset (S
 
 For a better view of the results, including RMSE, refer to the plots in the    `/models/result-plots/` folder.
 
-Conclusion: Random Forest gave the best validation R². Some performance tuning yielded a sligthly better R² result. 
+## Conclusion
+Random Forest gave the best validation R². Some performance tuning yielded a sligthly better R² result. 
 
 The better performace of Random forest could be attributed to the model performing better on non-linear relationships in data, while other less complex models such as multi and polynomial fare worse on such non-linear datasets.
-
-## Reproducibility / How to run
-1. Create the conda environment (recommended):
-```bash
-conda env create -f [environment.yml](http://_vscodecontentref_/5)
-conda activate reg-project
