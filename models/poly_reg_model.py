@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import r2_score
+from plot_utils import plot_pred_vs_actual
+from pathlib import Path
 
 df = fetch_california_housing(as_frame=True)
 X = df.data
@@ -30,5 +32,8 @@ pipeline = Pipeline(steps=[
 
 pipeline.fit(X_train, y_train)
 y_pred = pipeline.predict(X_test)
-score = r2_score(y_test, y_pred)
-print(score)  # 0.64569
+
+plots_dir = Path(__file__).resolve().parent / "result-plots"
+plots_dir.mkdir(parents=True, exist_ok=True)
+save_path = plots_dir / "poly_reg_result_plot.png"
+plot_pred_vs_actual(y_test, y_pred, str(save_path))
